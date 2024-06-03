@@ -19,7 +19,7 @@ class UserSeeder extends Seeder
             'name' => 'Leonel Saldanha',
             'username' => 'lsaldanha',
             'email' => 'superadmin@mail.pt',
-            'role' => 'superadmin',
+            'role' => 'admin',
             'status' => 'active',
             'password' => bcrypt('password')
           ],
