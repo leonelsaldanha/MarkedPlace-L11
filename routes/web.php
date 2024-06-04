@@ -20,9 +20,13 @@ Route::middleware('auth')->group(function () {
 });
 
 //Rota Admin
-route::get('admin/dashboard',[AdminController::class, 'dashboard'])->middleware('auth')->name('admin.dashboard');
+route::get('admin/dashboard',[AdminController::class, 'dashboard'])
+  ->middleware('auth','admin')
+  ->name('admin.dashboard');
 
 // Rota Tecnico
-route::get('tecnico/dashboard',[TecnicoController::class, 'dashboard'])->middleware('auth')->name('tecnico.dashboard');
+route::get('tecnico/dashboard',[TecnicoController::class, 'dashboard'])
+  ->middleware('auth','tecnico')
+  ->name('tecnico.dashboard');
 
 require __DIR__.'/auth.php';
